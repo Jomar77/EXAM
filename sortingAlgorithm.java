@@ -3,10 +3,9 @@ public class sortingAlgorithm {
     private long units;
     long start, end;
     String sorted = "";
+    public void sort{}
 
-    public String bubbleSort(int arr[], int agree) {
-        if (agree == 1) {
-            // ascending
+    public String bubbleSort(int arr[]) {     
             start = System.nanoTime();
             for (int x = 0; x < arr.length; x++) {
                 for (int y = 0; y < arr.length - 1; y++) {
@@ -16,26 +15,11 @@ public class sortingAlgorithm {
                         arr[y] = temp;
                     }
                 }
+                System.out.println(printArray(arr));
             }
-            end = System.nanoTime();
+            return sorted + "Time Units " + units;
         }
-        if (agree == 2) {
-            start = System.nanoTime();
-            for (int x = 0; x < arr.length; x++) {
-                for (int y = 0; y < arr.length - 1; y++) {
-                    if (arr[x] > arr[y]) {
-                        int temp = arr[x];
-                        arr[x] = arr[y];
-                        arr[y] = temp;
-                    }
-                }
-            }
-            end = System.nanoTime();
-        }
-        units = (end - start);
-        sorted = printArray(arr);
-        return sorted + "Time Units " + units;
-    }
+
 
     public String exchangeSort(int num[], int choice) {
         if (choice == 1) {
@@ -68,6 +52,25 @@ public class sortingAlgorithm {
         sorted = printArray(num);
         return sorted + "Time Units " + units;
     }
+
+    public double exponentiation(double base, double exponent) {
+        double result = 1;
+        while (exponent > 0) {
+            result *= base;
+            exponent--;
+            
+        }
+        return result;
+    }
+
+    public void Reverse() {
+            String reverse ="", str = "Innovation beyond Excellence";
+            int len = str.length()-1;
+            for (int i = 0; i <= len; i++){
+                reverse = reverse + str.charAt(i);
+            }
+            System.out.println(reverse);
+        }
 
     public String insertionSort(int num[], int choice) {
         int n = num.length;
@@ -106,9 +109,7 @@ public class sortingAlgorithm {
         return sorted + "Time Units " + units;
     }
 
-    public String selectionSort(int num[], int choice) {
-        if (choice == 1) {
-            start = System.nanoTime();
+    public String selectionSort(int num[]) {
             for (int i = 0; i < num.length - 1; i++) {
                 int min_idx = i;
                 for (int j = i + 1; j < num.length; j++) {
@@ -119,25 +120,8 @@ public class sortingAlgorithm {
                 int temp = num[min_idx];
                 num[min_idx] = num[i];
                 num[i] = temp;
+                System.out.println( printArray(num));
             }
-            end = System.nanoTime();
-        }
-        if (choice == 2) {
-            start = System.nanoTime();
-            for (int i = 0; i < num.length - 1; i++) {
-                int min_idx = i;
-                for (int j = i + 1; j < num.length; j++) {
-                    if (num[j] > num[min_idx]) {
-                        min_idx = j;
-                    }
-                }
-                int temp = num[min_idx];
-                num[min_idx] = num[i];
-                num[i] = temp;
-            }
-            end = System.nanoTime();
-        }
-        units = (end - start);
         sorted = printArray(num);
         return sorted + "Time Units " + units;
 

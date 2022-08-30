@@ -14,7 +14,6 @@ class ptest {
             System.out.println( "error");
             return;
     }
-
         //MGA BAWAL
         int size = s.length(); 
         if (size <= 3 || size >=10 || s.contains(" ")) {
