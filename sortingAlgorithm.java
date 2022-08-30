@@ -3,7 +3,6 @@ public class sortingAlgorithm {
     private long units;
     long start, end;
     String sorted = "";
-    public void sort{}
 
     public String bubbleSort(int arr[]) {     
             start = System.nanoTime();
