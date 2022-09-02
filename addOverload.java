@@ -12,7 +12,7 @@ public class addOverload {
             double num1 = Double.parseDouble(JOptionPane.showInputDialog("Enter a double: "));
             double num2 = Double.parseDouble(JOptionPane.showInputDialog("Enter another double: "));
             JOptionPane.showMessageDialog(null, "The sum of " + num1 + " and " + num2 + " is " + add(num1, num2));
-        } else if (choice == 3){
+    } else if (choice == 3){
             int num1 = Integer.parseInt(JOptionPane.showInputDialog("Enter an integer: "));
             double num2 = Double.parseDouble(JOptionPane.showInputDialog("Enter a double: "));
             JOptionPane.showMessageDialog(null, "The sum of " + num1 + " and " + num2 + " is " + add(num1, num2));
